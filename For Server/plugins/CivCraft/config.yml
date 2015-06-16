@@ -1,0 +1,37 @@
+#========== civcraft.net Server Listing Service (SLS) ==========#
+use_server_listing_service: 'true'
+#
+server_address: "Testers Only"
+#
+server_name: 'Dev: YourCoal'
+server_url: 'https://www.youtube.com/user/cpcole556'
+server_url_description: 'YourCoals YouTube'
+#
+server_timezone: 'CST'
+#
+server_description: 'Feels like phase 4 on ShotBow, but without ShotBow.'
+#
+debug_heartbeat: 'false'
+#=============== Database Configuration ===============#
+mysql:
+   hostname: localhost
+   port: '3306'
+   database: 'game'
+   username: root
+   password: 1234
+   table_prefix: ''
+   min_conns: '5'
+   max_conns: '10'
+   parts: '3'
+#
+global_database:
+    database: 'global'
+    hostname: localhost
+    port: '3306'
+    username: 'root'
+    password: '1234'
+    min_conns: '5'
+    max_conns: '10'
+    parts: '3'
+#
+server_phase: 'TestServer'

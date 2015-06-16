@@ -1,0 +1,15 @@
+town_scores:
+ # How many points is each town chunk worth
+ town_chunk: 25
+ # How many points is each culture chunk this town owns is worth
+ culture_chunk: 10
+ # Points per resident in town
+ resident: 100
+
+buy:
+ civ_coins_per_point: 5.0
+ town_coins_per_point: 2.5
+
+money_score:
+ town: 5.0
+ civ: 5.0

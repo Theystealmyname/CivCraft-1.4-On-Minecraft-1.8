@@ -1,0 +1,111 @@
+######## Global Trade Good Options #######
+# maximum bonus from same-type goods you can get.
+trade_good_multiplier_max: 3
+# Number of days before repo. When goodies are
+# repo'd they go back to the trade outpost that spawned them.
+trade_goodie_repo_days: 7
+########### Trade Good Generation Options #######
+generation:
+    # Minimum number of chunks trade goods can be apart
+    chunks_min: 4
+    # Maximum number of chunks trade goods should be apart
+    chunks_max: 24
+    # World size in x chunks (radius)
+    chunks_x: 625
+    # World size in z chunks (radius)
+    chunks_z: 625
+    # Random seed for trade good locations
+    seed: 2520150148
+
+# Hemispheres, valid ranges that trade goods can spawn in.
+hemispheres:
+    - id: 'hemi_north'
+      x_min: 0
+      x_max: 0
+      z_min: 0
+      z_max: -200
+        
+    - id: 'hemi_south'
+      x_min: 0
+      x_max: 0
+      z_min: 200
+      z_max: 0
+      
+    - id: 'hemi_east'
+      x_min: 200
+      x_max: 0
+      z_min: 0
+      z_max: 0
+
+    - id: 'hemi_west'
+      x_min: 0
+      x_max: -200
+      z_min: 0
+      z_max: 0
+
+    - id: 'hemi_equator'
+      x_min: 0
+      x_max: 0
+      z_min: -200
+      z_max: 200
+
+    - id: 'hemi_northeast'
+      x_min: 200
+      x_max: 0
+      z_min: 0
+      z_max: -200
+
+    - id: 'hemi_northwest'
+      x_min: 0
+      x_max: -200
+      z_min: 0
+      z_max: -200
+
+    - id: 'hemi_southwest'
+      x_min: 0
+      x_max: -200
+      z_min: 200
+      z_max: 0
+
+    - id: 'hemi_southeast'
+      x_min: 200
+      x_max: 0
+      z_min: 200
+      z_max: 0
+########## Trade Good Types #######
+land_goods:
+    - id: 'good_oil'
+      name: Oil
+      value: 375.0
+      buffs: 'buff_advanced_tooling, buff_extraction, buff_fire_bomb'
+      material: 351
+      material_data: 0
+
+    - id: 'good_guarana'
+      name: Guarana
+      value: 375.0
+      buffs: 'buff_extraction, buff_rush, buff_medicine'
+      material: 351
+      material_data: 1
+
+    - id: 'good_tobacco'
+      name: Tobacco
+      value: 375.0
+      buffs: 'buff_fine_art, buff_greed, buff_monopoly'
+      material: 338
+      material_data: 0
+
+water_goods: 
+    - id: 'good_pearls'
+      name: Pearls
+      value: 375.0
+      buffs: 'buff_monopoly, buff_greed'
+      material: 332 # Snow ball
+      material_data: 0
+
+    - id: 'good_whale'
+      name: Whale
+      value: 500.0
+      buffs: 'buff_innovation, buff_advanced_tooling, buff_fine_art, buff_extraction'
+      material: 345 # compass
+      material_data: 0

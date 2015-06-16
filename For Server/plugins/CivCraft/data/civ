@@ -1,0 +1,100 @@
+global:
+ # Hour at which daily upkeep occurs.
+ daily_upkeep_hour: 20
+ # How Many Seconds Until Hourly Tick Runs.
+ hourly_tick: 3600
+ # When players join for the first time, MySQL Attempts to give them these items.
+ start_kit:
+   - '364:24'
+   - '269:1'
+   - '270:1'
+   - '271:1'
+   - '346:2'
+   - '17:10'
+   - '345:1'
+   - 'mat_tutorial_book:1'
+   - 'mat_found_camp:1'
+ # When players join for the first time, MySQL Attempts to give them this much money.
+ starting_coins: 500.0
+ # Exchange rate you get using /resident exchange instead of using a bank.
+ exchange_rate: 0.3
+ # Amount of mins PvP timer remains active after first login.
+ pvp_timer: 120
+ # Regen spawn at midnight every day.
+ regen_spawn_hour: 20
+ # Number of hours that must pass before a resident can join a different civ
+ join_civ_cooldown: 4
+ # Distance things must be built away from spawn.
+ distance_from_spawn: 1000.0
+ # Casual mode, war disabled. Wonders for all. No spies.
+ casual_mode: 'false'
+ # Attempt to validate structures to make sure they're not floating.
+ structure_validation: 'true'
+
+civ:
+  # Amount of static upkeep civ's pay for each new town(minus the capitol)
+  town_upkeep: 100.0
+  # Formula for distance upkeep is:
+  # upkeep = town_distance_base_upkeep * ( distance ^ town_distance_multiplier )
+  # Base amount of upkeep paid for town distance to capitol
+  town_distance_base_upkeep: 0.0
+  # Multiplier used to make distance upkeep expoential, greater = higher upkeep
+  town_distance_multiplier: 0.15
+  # Multiplier used when a town's culture doesnt connect to the capitols culture.
+  town_distance_multiplier_outside_culture: 0.4
+  # Maximum amount of distance upkeep anybody can pay per town
+  town_distance_upkeep_max: 500000.0
+  # Base beaker rate, usually set to 1, increase to make research faster.
+  base_beaker_rate: 1.0
+  # Number of coins each beaker costs. Beakers can only be 'bought' off of taxed coins from towns.
+  coins_per_beaker: 10
+  # must be this many chunks away from the nearest culture block to start a new civilization.
+  min_distance: 24
+  # Number of days after a civilization is conquered that it must wait before declaring revolution
+  revolution_cooldown: 7
+  # Number of days a leader must be inactive before being able to be reclaimed
+  leader_inactive_days: 7
+  # Number of days a civ must be around before it can merge or gift towns.
+  min_gift_age: 7
+  # Amount of coins to charge per town gifted.
+  gift_cost_per_town: 75000
+  # Amount of hours civs have to wait until a town is gifted or merged.
+  gift_cooldown_hours: 48
+
+ore_rates:
+  iron: 20.0
+  gold: 200.0
+  diamond: 400.0
+  emerald: 500.0
+
+end_conditions:
+ - id: 'end_culture'
+   class: 'EndConditionCulture'
+   name: 'Cultural'
+   culture_level: '10'
+   towns: '4'
+   wonders: '1'
+   days_held: '21'
+   days_after_start: '90'
+#
+ - id: 'end_conquest'
+   class: 'EndConditionConquest'
+   name: 'Conquest'
+   captured%: '0.75'
+   with_wonder%: '0.5'
+   days_held: '21'
+   days_after_start: '90'
+#
+ - id: 'end_science'
+   class: 'EndConditionScience'
+   name: 'Scientific'
+   tech: 'tech_enlightenment'
+   days_held: '21'
+   days_after_start: '90'
+#
+ - id: 'end_diplomacy'
+   class: 'EndConditionDiplomacy'
+   name: 'Diplomatic'
+   vote_cooldown_hours: '24'
+   days_held: '21'
+   days_after_start: '90'

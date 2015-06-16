@@ -1,0 +1,194 @@
+materials:
+#======================================#
+#============> Resources <=============#
+#======================================#
+ - id: 'civ:hammers'
+   item_id: 139
+   item_data: 0
+   name: 'Hammers'
+   craftable: false
+   shaped: false
+   category: '<lightgreen>Resources'
+#
+ - id: 'civ:beakers'
+   item_id: 374
+   item_data: 0
+   name: 'Beakers'
+   craftable: false
+   shaped: false
+   category: '<lightgreen>Resources'
+#======================================#
+#=============> Specials <=============#
+#======================================#
+ - id: 'mat_found_civ'
+   item_id: 369
+   item_data: 0
+   name: 'Founding Civilization Flag'
+   craftable: true
+   shaped: true
+   category: 'Special'
+   components:
+     - name: 'FoundCivilization'
+   ingredients:
+     - type_id: 41
+       data: 0
+       letter: 'g'
+     - type_id: 57
+       data: 0
+       letter: 'd'
+     - type_id: 133
+       data: 0
+       letter: 'e'
+   shape:
+       - "ggg"
+       - "dgd"
+       - "ede"
+#
+ - id: 'mat_found_camp'
+   item_id: 7
+   item_data: 0
+   name: 'Founding Camp Item'
+   craftable: true
+   shaped: true
+   category: 'Special'
+   components:
+     - name: 'FoundCamp'
+   ingredients:
+     - type_id: 42
+       data: 0
+       letter: 'g'
+     - type_id: 17
+       data: 0
+       letter: 'd'
+   shape:
+       - "ddd"
+       - "ggg"
+       - "ggg"
+#======================================#
+#===============> Bows <===============#
+#======================================#
+ - id: 'civ:regular_bow'
+   item_id: 261
+   item_data: 0
+   name: 'Regular Bow'
+   craftable: true
+   shaped: true
+   category: 'Bows'
+   ingredients:
+     - type_id: 287
+       data: 0
+       letter: 's'
+     - type_id: 280
+       data: 0
+       letter: 'w'
+   shape:
+       - "ws "
+       - "w s"
+       - "ws "
+#======================================#
+#==============> Swords <==============#
+#======================================#
+ - id: 'civ:reg_dia_sword'
+   item_id: 276
+   item_data: 0
+   name: 'Regular Diamond Sword'
+   craftable: true
+   shaped: true
+   category: 'Swords'
+   components:
+     - name: 'ExtraDamage'
+       value: '7'
+   ingredients:
+     - type_id: 57
+       data: 0
+       letter: 'd'
+     - type_id: 280
+       data: 0
+       letter: 's'
+   shape:
+       - " d "
+       - " d "
+       - " s "
+#
+ - id: 'civ:lvl1_dia_sword'
+   item_id: 276
+   item_data: 0
+   name: 'Level 1 Diamond Sword'
+   craftable: true
+   shaped: true
+   category: 'Swords'
+   components:
+     - name: 'ExtraDamage'
+       value: '8.5'
+     - name: 'MaxHealth'
+       value: '2'
+   ingredients:
+     - type_id: 0
+       custom_id: 'civ:reg_dia_sword'
+       data: 0
+       letter: 'w'
+     - type_id: 57
+       data: 0
+       letter: 'b'
+   shape:
+       - "bwb"
+       - "bwb"
+       - "bwb"
+#
+ - id: 'civ:lvl2_dia_sword'
+   item_id: 276
+   item_data: 0
+   name: 'Level 2 Diamond Sword'
+   craftable: true
+   shaped: true
+   category: 'Swords'
+   components:
+     - name: 'ExtraDamage'
+       value: '10'
+     - name: 'MaxHealth'
+       value: '4'
+   ingredients:
+     - type_id: 0
+       custom_id: 'civ:lvl1_dia_sword'
+       data: 0
+       letter: 'w'
+     - type_id: 57
+       data: 0
+       letter: 'b'
+   shape:
+       - "bwb"
+       - "bwb"
+       - "bwb"
+#======================================#
+#==============> Armor <===============#
+#======================================#
+ - id: 'civ:reg_dia_chest'
+   item_id: 311
+   item_data: 0
+   name: 'Regular Diamond Chestplate'
+   craftable: true
+   shaped: true
+   category: 'Armor'
+   components:
+   ingredients:
+     - type_id: 264
+       data: 0
+       letter: 'd'
+   shape:
+       - "d d"
+       - "ddd"
+       - "ddd"
+#
+removed_recipes:
+ #Bow
+ - type_id: 261
+   data: 0
+ #Diamond Sword
+ - type_id: 276
+   data: 0
+ #Diamond Chestplate
+ - type_id: 311
+   data: 0
+ #Anvil
+ - type_id: 145
+   data: 0
